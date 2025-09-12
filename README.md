@@ -13,7 +13,8 @@
 python3 view_go2.py
 
 # 双击选中零件
-# ctrl + 左键 进行拖拽
+# ctrl + 左键 添加力矩
+# ctrl + 右键 添加力
 ```
 
 ## 什么是 Mujoco Playground?

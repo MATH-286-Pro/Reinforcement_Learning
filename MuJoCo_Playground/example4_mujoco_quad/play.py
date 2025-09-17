@@ -54,7 +54,7 @@ ppo_params = locomotion_params.brax_ppo_config(env_name)  # 默认四足机器�
 
 
 # 加载训练模型
-path_save_file = "/home/ece-486/Desktop/Code/Reinforcement_Learning/example4_mujoco_quad/saved_models/25-09-15_21-52_trained_params.pkl"
+path_save_file = "/home/ece-486/Desktop/Code/Reinforcement_Learning/MuJoCo_Playground/example4_mujoco_quad/saved_models/25-09-15_21-52_trained_params.pkl"
 params_load = model.load_params(path_save_file) 
 
 # 创建训练函数，用于复原 make_inference_fn
@@ -199,4 +199,4 @@ frames = eval_env.render(
 # 保存视频到当前文件夹
 tools.save_video(frames, 
                  fps=30, 
-                 relative_path="./example4_mujoco_quad/saved_videos")
+                 relative_path="./MuJoCo_Playground/example4_mujoco_quad/saved_videos")

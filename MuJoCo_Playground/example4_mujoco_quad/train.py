@@ -57,7 +57,7 @@ def main():
     print(f"time to train: {times[-1] - times[1]}")
 
     # 保存训练模型
-    tools.save_model(params, relative_path="./example4_mujoco_quad/saved_models")
+    tools.save_model(params, relative_path="./MuJoCo_Playground/example4_mujoco_quad/saved_models")
 
 
 if __name__ == "__main__":

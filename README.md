@@ -13,6 +13,8 @@ https://mujoco.readthedocs.io/en/stable/overview.html
 
 MuJoCo 支持 C++ 和 Python
 
+![alt text](image.png)
+
 ## 使用指南
 ```bash
 # 安装相关依赖

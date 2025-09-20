@@ -1,0 +1,5 @@
+archi:
+  actor:
+    obs_dim: 8
+  critic:
+    obs_dim: 8

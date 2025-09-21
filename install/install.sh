@@ -9,3 +9,4 @@ pip install jax[cuda12]    # 安装 Cuda 版本 Jax
 pip install mediapy        # 安装 mediapy
 pip install wandb
 pip install hydra-core --upgrade
+pip install matplotlib

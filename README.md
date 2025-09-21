@@ -1,5 +1,11 @@
 # MuJoCo Playground
 
+## Conda 使用
+```bash
+# windows 上在 conda activate 前先运行以下代码
+source ~/miniconda3/etc/profile.d/conda.sh
+```
+
 ## 官方网站
 
 总网站
@@ -34,3 +40,10 @@ python3 view_go2.py
 
 ## 什么是 MuJoCo Playground?
 
+
+
+
+## 更新日志
+- 2025.9.21 周日
+  - 在 windows 上测试可以使用 view_go2.py 使用 MuJoCo GUI
+  - 在 windows 上测试可以 Project 1 可以使用 hydra 

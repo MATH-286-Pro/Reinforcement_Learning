@@ -46,37 +46,19 @@ from mujoco_playground import registry
 from mujoco_playground.config import locomotion_params
 
 
+# 训练进度条函数
+def progress(num_steps, metrics):
+    
+    # 更新描述信息
+    reward = metrics.get("eval/episode_reward", 0)
+    reward_std = metrics.get("eval/episode_reward_std", 0)
+
+    if num_steps % 5000 == 0:
+        print(f"step: {num_steps}, reward: {reward:.1f} +/- {reward_std:.1f}")
+        
+
 # 训练函数
 def build_train_fun(env_name, ppo_params):
-
-    # 训练进度条函数
-    def progress(num_steps, metrics):
-        global pbar, times
-        
-        times.append(datetime.now())
-        
-        # 初始化进度条
-        if pbar is None:
-            pbar = tqdm(total=ppo_params["num_timesteps"], 
-                        desc="Training", 
-                        unit="steps",
-                        position=0)
-        
-        # 更新进度条
-        current_steps = num_steps
-        pbar.n = current_steps
-        
-        # 更新描述信息
-        reward = metrics.get("eval/episode_reward", 0)
-        reward_std = metrics.get("eval/episode_reward_std", 0)
-        
-        pbar.set_postfix({
-            'reward': f'{reward:.3f}',
-            'reward_std': f'{reward_std:.3f}',
-            'elapsed': str(times[-1] - times[0]).split('.')[0]
-        })
-        
-        pbar.refresh()
 
     randomizer = registry.get_domain_randomizer(env_name)
     ppo_training_params = dict(ppo_params)

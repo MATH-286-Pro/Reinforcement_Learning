@@ -1,5 +1,3 @@
-# More legible printing from numpy.
-np.set_printoptions(precision=3, suppress=True, linewidth=100)
 
 # @title Import MuJoCo, MJX, and Brax
 from datetime import datetime
@@ -19,6 +17,8 @@ from brax.training.agents.sac import train as sac
 from mujoco import mjx
 import numpy as np
 
+# More legible printing from numpy.
+np.set_printoptions(precision=3, suppress=True, linewidth=100)
 
 #@title Import The Playground
 from mujoco_playground import wrapper
@@ -38,9 +38,6 @@ def main():
     # 训练参数
     ppo_params = locomotion_params.brax_ppo_config(env_name)  # 默认四足机器人训练参数
 
-    # 训练
-    times = [datetime.now()]
-
     # 训练参数设定
     ppo_params.num_timesteps = int(5*1e7)
 
@@ -53,8 +50,6 @@ def main():
         eval_env=registry.load(env_name, config=env_cfg),
         wrap_env_fn=wrapper.wrap_for_brax_training,
     )
-    print(f"time to jit: {times[1] - times[0]}")
-    print(f"time to train: {times[-1] - times[1]}")
 
     # 保存训练模型
     tools.save_model(params, relative_path="./MuJoCo_Playground/example4_mujoco_quad/saved_models")

@@ -32,7 +32,7 @@ class SimplePendulumEnv(gym.Env):
         self.theta_threshold = 12 * 2 * np.pi / 360  # 角度限制（弧度）
         
         # 加载 MuJoCo 模型
-        xml_path = r"c:\Users\Jiajun Hu\Desktop\Code\Reinforcement_Learning\MY_TEST\project1\env\inverted_pendulum.xml"
+        xml_path = "/home/math-286-dell/Desktop/Code/Reinforcement_Learning/MY_TEST/project1/env/inverted_pendulum.xml"
         self.model = mujoco.MjModel.from_xml_path(xml_path)
         self.data = mujoco.MjData(self.model)
         

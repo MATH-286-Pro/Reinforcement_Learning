@@ -40,6 +40,9 @@ MuJoCo 支持 C++ 和 Python
 
 
 
+
+
+
 ## 使用指南
 ```bash
 # 安装相关依赖
@@ -48,7 +51,10 @@ MuJoCo 支持 C++ 和 Python
 # 进入 examples 查看 example 1-3 案例
 ```
 
-
+```bash
+# 运行 MY_TEST/project1/controller/PID.py 效果
+```
+https://github.com/user-attachments/assets/2a4f6d82-7bc8-468b-b190-20ac2ae98538
 
 
 

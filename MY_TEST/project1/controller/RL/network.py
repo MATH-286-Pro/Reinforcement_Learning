@@ -3,7 +3,7 @@ import torch.nn as nn
 import dataclasses
 import hydra
 from hydra.core.config_store import ConfigStore
-import USER_DATATYPE
+from . import USER_DATATYPE
 
 ############ 基础函数 #############
 class Actor(nn.Module):

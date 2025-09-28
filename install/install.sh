@@ -10,3 +10,4 @@ pip install mediapy        # 安装 mediapy
 pip install wandb
 pip install hydra-core --upgrade
 pip install matplotlib
+pip install warp-lang
